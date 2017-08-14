@@ -26,9 +26,9 @@ window.renderStatistics = function (ctx, names, times) {
 
   ctx.textBaseLine = 'top';
 
-  for (var i = 0; i < times.length; i++) {
-    ctx.fillStyle = 'rgba(0, 0, 255, '+ Math.random() +')';
-    if (names[i] == 'Вы') {
+  for (i = 0; i < times.length; i++) {
+    ctx.fillStyle = 'rgba(0, 0, 255, ' + Math.random() + ')';
+    if (names[i] === 'Вы') {
       ctx.fillStyle = 'rgba(255, 0, 0, 1)';
     }
     ctx.fillRect(initialX + (indent + barWidth) * i, initialY + (histogramHeight - times[i] * step), barWidth, times[i] * step);
