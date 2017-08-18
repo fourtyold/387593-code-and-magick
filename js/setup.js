@@ -15,17 +15,17 @@ function getRandomIndex(index) {
 
 for (var i = 0; i < 4; i++) {
   wizards[i] = {
-    name: WIZARD_NAMES[getRandomIndex(WIZARD_NAMES.length)] +' '+ WIZARD_SURNAMES[getRandomIndex(WIZARD_SURNAMES.length)],
+    name: WIZARD_NAMES[getRandomIndex(WIZARD_NAMES.length)] + ' ' + WIZARD_SURNAMES[getRandomIndex(WIZARD_SURNAMES.length)],
     coatColor: COAT_COLORS[getRandomIndex(COAT_COLORS.length)],
     eyesColor: EYES_COLORS[getRandomIndex(EYES_COLORS.length)]
-  }
+  };
 }
 
 var similarWizardTemplate = document.querySelector('#similar-wizard-template').content;
 var similarListElement = userDialog.querySelector('.setup-similar-list');
 var wizardElement;
 
-var  renderWizard = function(wizard) {
+var renderWizard = function (wizard) {
   wizardElement = similarWizardTemplate.cloneNode(true);
   wizardElement.querySelector('.setup-similar-label').textContent = wizard.name;
   wizardElement.querySelector('.wizard-coat').style.fill = wizard.coatColor;
