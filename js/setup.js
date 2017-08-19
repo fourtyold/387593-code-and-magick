@@ -13,7 +13,7 @@ function getRandomIndex(index) {
 }
 
 function getWizard(names, surnames, coats, eyes) {
-  var similarWizards =[];
+  var similarWizards = [];
   for (var i = 0; i < 4; i++) {
     similarWizards[i] = {
       name: names[getRandomIndex(names.length)] + ' ' + surnames[getRandomIndex(surnames.length)],
