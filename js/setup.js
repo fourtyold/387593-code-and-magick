@@ -77,43 +77,43 @@ function onUserDialogEscPress(evt) {
   }
 }
 
-userDialogOpen.addEventListener('click', function() {
+userDialogOpen.addEventListener('click', function () {
   showUserDialog();
 });
 
-userDialogOpen.addEventListener('keydown', function(evt) {
+userDialogOpen.addEventListener('keydown', function (evt) {
   if (evt.keyCode === KEY_CODES.enter) {
     showUserDialog();
   }
 });
 
-userDialogClose.addEventListener('click', function() {
+userDialogClose.addEventListener('click', function () {
   hideUserDialog();
 });
 
-userDialogClose.addEventListener('keydown', function(evt) {
+userDialogClose.addEventListener('keydown', function (evt) {
   if (evt.keyCode === KEY_CODES.enter) {
     hideUserDialog();
   }
 });
 
-setupUserName.onblur = function() {
+setupUserName.onblur = function () {
   setupUserNameFocus = 0;
 };
 
-setupUserName.onfocus = function() {
+setupUserName.onfocus = function () {
   setupUserNameFocus = 1;
 };
 
-setupWizard.querySelector('.wizard-coat').addEventListener('click', function() {
+setupWizard.querySelector('.wizard-coat').addEventListener('click', function () {
   setupWizard.querySelector('.wizard-coat').style.fill = COAT_COLORS[getRandomIndex(COAT_COLORS.length)];
 });
 
-setupWizard.querySelector('.wizard-eyes').addEventListener('click', function() {
+setupWizard.querySelector('.wizard-eyes').addEventListener('click', function () {
   setupWizard.querySelector('.wizard-eyes').style.fill = EYES_COLORS[getRandomIndex(EYES_COLORS.length)];
 });
 
-setupFireball.addEventListener('click', function() {
+setupFireball.addEventListener('click', function () {
   setupFireball.style.backgroundColor = FIREBALL_COLORS[getRandomIndex(FIREBALL_COLORS.length)];
 });
 
